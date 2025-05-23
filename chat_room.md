@@ -9,16 +9,23 @@ interact with individual chat rooms.
 ## **Requirements**
 
 ### 1. **ChatRoom Module**
-   Implement a `ChatRoom` module that uses GenServer to represent a single chat room. Each chat room should support:
-   - **User Management**: Users should be able to join and leave the room. Keep track of users currently in the room.
-   - **Messaging**: Users should be able to send messages to the chat room. Each message should include the sender’s name and a timestamp.
-   - **Message History**: Maintain a history of messages sent to the chat room, which can be retrieved on request.
+   Implement a `ChatRoom` module that uses GenServer to represent a single chat room.
+   Each chat room should support:
+   - **User Management**: Users should be able to join and leave the room.
+       Keep track of users currently in the room.
+   - **Messaging**: Users should be able to send messages to the chat room.
+       Each message should include the sender’s name and a timestamp.
+   - **Message History**: Maintain a history of messages sent to the chat room,
+       which can be retrieved on request.
 
 ### 2. **ChatServer Module**
-   Implement a `ChatServer` module that manages all active chat rooms. The `ChatServer` should:
-   - **Create and Manage Chat Rooms**: Provide a way to create new chat rooms, each identified by a unique name.
+   Implement a `ChatServer` module that manages all active chat rooms.
+   The `ChatServer` should:
+   - **Create and Manage Chat Rooms**: Provide a way to create new chat rooms,
+       each identified by a unique name.
    - **List Available Rooms**: Allow users to view a list of all active chat rooms.
-   - **Route Messages and Fetch History**: Enable users to send messages to specific rooms and retrieve the message history of a given room.
+   - **Route Messages and Fetch History**: Enable users to send messages
+       to specific rooms and retrieve the message history of a given room.
 
 ### 3. **Edge Cases and Error Handling**
    Ensure that your system handles various edge cases, such as:
