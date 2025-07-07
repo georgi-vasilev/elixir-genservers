@@ -124,8 +124,7 @@ defmodule ChatRoom do
     - `{:noreply, new_state}`: With the `user_id` removed from the `participants` list.
   """
   @impl true
-  def handle_cast({:leave, user_id}, state) do
-    new_participants = List.delete(state.participants, user_id)
+  def handle_cast({:leave, user_id}, state) do new_participants = List.delete(state.participants, user_id)
     {:noreply, %Chat{state | participants: new_participants}}
   end
 
